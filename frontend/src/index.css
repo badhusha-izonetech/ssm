@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+@theme {
+  /* Solar CRM Clean Energy Enterprise Palette */
+  --color-ink: #f4f7f5;
+  --color-panel: #ffffff;
+  --color-panel-raised: #f8faf9;
+  --color-border: #e2e8e5;
+  --color-border-subtle: #edf2ef;
+  
+  /* Solar & Eco Greens */
+  --color-sun: #16a34a;
+  --color-sun-deep: #0f5a2e;
+  --color-sun-light: #ecfdf5;
+  --color-teal: #10b981;
+  --color-teal-deep: #047857;
+  --color-teal-light: #f0fdf4;
+  
+  /* Secondary Clean Blue & Status */
+  --color-sky: #0284c7;
+  --color-sky-deep: #0369a1;
+  --color-sky-light: #f0f9ff;
+  --color-amber: #d97706;
+  --color-amber-light: #fffbeb;
+  --color-rose: #e11d48;
+  --color-rose-light: #fff1f2;
+  
+  /* Deep Navy & Slate Typography */
+  --color-text: #0f172a;
+  --color-text-dim: #5b677a;
+  --color-text-muted: #8b95a5;
+  
+  --font-brand: "Space Grotesk", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-display: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+  background-color: var(--color-ink);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-feature-settings: "cv11", "ss01";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Base card transition & subtle shadow */
+.solar-card {
+  background-color: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: 1rem;
+  box-shadow: 0 1px 3px 0 rgba(15, 23, 42, 0.04), 0 1px 2px -1px rgba(15, 23, 42, 0.03);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.solar-card-hover:hover {
+  box-shadow: 0 10px 15px -3px rgba(15, 23, 42, 0.06), 0 4px 6px -4px rgba(15, 23, 42, 0.03);
+  border-color: #cbd5e1;
+}
